@@ -1,5 +1,3 @@
-package Classes;
-
 class Person {
 
     // Instance variables (data or "state")
@@ -20,7 +18,7 @@ class Person {
     }
 }
 
-public class Classes {
+public class Method {
     public static void main(String[] args) {
         Person person1 = new Person();
         person1.name = "Joe Bloggs";
