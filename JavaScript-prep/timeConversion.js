@@ -17,4 +17,14 @@ function timeConversion(s) {
 
 }
 
-console.log(timeConversion("07:05:45PM"))
+timeConversion("07:05:45PM")
+
+function findMedian(arr) {
+    // Write your code here
+    const copyArr = arr.sort((a,b)=>a-b)
+    let median = Math.ceil(copyArr.length/2)
+    return copyArr[median-1]
+
+}
+
+console.log(findMedian([0,1,5,9,3]))
