@@ -32,5 +32,6 @@ public class StaticVariables {
 
         thing1.showName();
         thing2.showName();
+        // 
     }
 }
