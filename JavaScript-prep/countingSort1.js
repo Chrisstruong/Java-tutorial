@@ -20,13 +20,13 @@ function countingSort(arr) {
     }
     return arr2
 
-    // let max = Math.max(...arr)
-    // let arr2 = new Array(max+1).fill(0)
-    // for (let i=0; i < arr.length; i++){
-    //     // The number in arr represent the index of arr2
-    //     arr2[arr[i]]++
-    // }
-    // return arr2
+    let max = Math.max(...arr)
+    let arr2 = new Array(max+1).fill(0)
+    for (let i=0; i < arr.length; i++){
+        // The number in arr represent the index of arr2
+        arr2[arr[i]]++
+    }
+    return arr2
 
     
 
