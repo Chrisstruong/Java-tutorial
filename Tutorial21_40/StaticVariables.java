@@ -1,13 +1,25 @@
 package Tutorial21_40;
 
 class Thing {
+    public final static int LUCKY_NUMBER = 7;
     public String name ;
     public static String description;
-    // Static is constant (const in JavaScript)
+    // final is constant (const in JavaScript)
+
+    public static int count = 0;
+
+    public int id;
+    
+    public Thing(){
+
+        id =count;
+
+        count++;
+    }
 
     public void showName(){
-        // Instant method can access to static variables(datas)
-        System.out.println(description + ": "+name);
+        // Instance method can access to static variables(datas)
+        System.out.println("Object id: " + id + " description" + ": " + name);
     }
 
     public static void showInfo(){
@@ -20,18 +32,31 @@ class Thing {
 
 public class StaticVariables {
     public static void main(String[] args){
+
         Thing.description = "I am a thing";
-        System.out.println(Thing.description);
+
         Thing.showInfo();
 
-        Thing thing1 = new Thing();
-        Thing thing2 = new Thing();
+        System.out.println("Before creating objects, count is: "+ Thing.count);
+
+        Thing thing1 = new Thing();//Contrstuctor is called (whenenver creating a instance of Thing)
+        Thing thing2 = new Thing();//Contrstuctor is called
+
+        System.out.println("After creating objects, count is: "+ Thing.count);
+
 
         thing1.name = "Bob";
         thing2.name = "Sue";
 
         thing1.showName();
         thing2.showName();
-        // 
+
+        System.out.println(Math.PI);
+
+        System.out.println(Thing.LUCKY_NUMBER);
+
+
+
+        
     }
 }
