@@ -10,3 +10,5 @@ function towerBreakers(n, m) {
     }
 
 }
+
+console.log(String.fromCharCode(33))
