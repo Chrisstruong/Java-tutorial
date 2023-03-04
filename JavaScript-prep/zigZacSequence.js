@@ -1,8 +1,9 @@
 function processData(input) {
     //Enter your code here
-    const input2 = []
-    for (let k=1; k <= input; k++) {
-        input2.push(k)
+    const input2 = input.split(' ')
+
+    for (let k =0; k<input2.length; k++){
+        input2[k] = parseInt(input2[k])
     }
 
     input2.sort((a,b)=>a-b)
@@ -20,9 +21,9 @@ function processData(input) {
     }
     arr2.sort((a,b)=>b-a)
     const arr1 = input2.slice(0, input2.indexOf(max)+1)
-    const result = [...arr1, ...arr2]
+    const result = [...arr1, ...arr2].join(' ')
     return result    
 
 }
 
-console.log(processData(7))
+console.log(processData("1 2 3 4 5 6 7"))
