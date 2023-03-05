@@ -39,3 +39,7 @@ function processData(input) {
 console.log(processData("1 2 3 4 5 6 7"))
 
 console.log(5%1)
+
+const arr = ['a', 'b', 'e', 'd']
+arr.sort((a,b)=>b-a)
+console.log(arr)
