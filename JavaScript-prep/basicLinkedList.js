@@ -256,12 +256,13 @@ const ll = new LinkedList()
 
 ll.insertFirst(100)
 ll.insertFirst(200)
-ll.insertFirst(300)
-ll.insertLastNode(400)
-ll.insertAt(500,10)
+console.log(ll)
+// ll.insertFirst(300)
+// ll.insertLastNode(400)
+// ll.insertAt(500,10)
 
 // ll.removeAt(33)
 ll.clearList()
 
-ll.printListData()
+// ll.printListData()
 // ll.getAt(2)
