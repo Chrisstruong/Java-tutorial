@@ -72,6 +72,8 @@ while(temp!= null) {
     temp = temp.next
 }
 
+// Space 0(1)
+// time 0(m+n)
 
 
 

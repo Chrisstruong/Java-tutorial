@@ -16,6 +16,9 @@ function cookies(k, A) {
     } 
     return iteration
 
+    // Space O(n)
+    // Time O(n)
+
 }
 
 
