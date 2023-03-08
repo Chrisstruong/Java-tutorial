@@ -34,7 +34,7 @@ function miniMaxSum(arr) {
     }
     console.log(minSum, maxSum)
     // Time complexity: O(1) since the length of input is always 5
-    // Space complexity: O(1) since the length of input is always 5
+    // Space complexity: O(n)
     
 
 }
