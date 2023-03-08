@@ -15,6 +15,8 @@
 
 // console.log(book2.getSummary())
 
+
+
 // Constructor
 function Book(title, author, year){
     this.title = title
