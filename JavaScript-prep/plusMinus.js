@@ -44,3 +44,6 @@ function plusMinus(arr) {
     console.log(negativeRatio)
     console.log(zeroRatio)
 }
+
+let largest = -Number.MAX_VALUE;
+console.log(largest)
