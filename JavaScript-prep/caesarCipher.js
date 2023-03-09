@@ -99,21 +99,28 @@ function caesarCipher(s, k) {
     // }
     // return rotatedString
 
-    let lowerString = "abcdefghijklmnopqrstuvwxyz"
+    let lowerString = "abcdefghijklmnopqrstuvwxyz"//index table. Use it to take the letter from rotatedIndex
     let upperString = lowerString.toUpperCase()
     s = s.split('')
     let rotatedString = ""
-    for (let i=0; i < s.length; i++) {
-        if (lowerString.includes(s[i])) {
-            let rotatedIndex = (lowerString.indexOf(s[i]) + k) % 26
-            console.log(rotatedIndex)
-            rotatedString += lowerString[rotatedIndex]
-        } else if (upperString.includes(s[i])) {
-            let rotatedIndex = (upperString.indexOf(s[i]) + k) % 26
-            rotatedString += upperString[rotatedIndex]
-        } else rotatedString += s[i]
+    // for (let i=0; i < s.length; i++) {
+    //     if (lowerString.includes(s[i])) {
+    //         let rotatedIndex = (lowerString.indexOf(s[i]) + k) % 26
+    //         console.log(rotatedIndex)
+    //         rotatedString += lowerString[rotatedIndex]
+    //     } else if (upperString.includes(s[i])) {
+    //         let rotatedIndex = (upperString.indexOf(s[i]) + k) % 26
+    //         rotatedString += upperString[rotatedIndex]
+    //     } else rotatedString += s[i]
+    // }
+
+    for (let i = 0; i < lowerString.length; i++) {
+        if (s.includes(lowerString[i])) {
+            let rotatedIndex = (s.indexOf(lowerString[i]+k) % 26)
+            // Do this wont give you the rotated letter because EX; s has length of 10000, so wont give a exact index to return.
+        }
     }
     return rotatedString
 }
 
-console.log(caesarCipher('ABCz', 1))
+console.log(caesarCipher('abc', 1))
