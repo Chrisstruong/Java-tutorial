@@ -62,18 +62,19 @@
 
 
 function superDigit(n, k) {
-    let arrN = n.split('')
-    arrN = arrN.map(num=>{return parseInt(num)})
-
-
-    let sum = arrN.reduce((accumalator, currentValue)=>{
-        return ((accumalator + currentValue))
+    let arrayN = n.split('')
+    // array of strings
+    arrayN = arrayN.map(num=>{
+        return parseInt(num)
+    })
+    console.log(arrayN)
+    let sum = arrayN.reduce((accumulator, currentValue)=> {
+        return accumulator + currentValue
     }, 0)
-    sum = sum *k
-
-   n = sum.toString()
-
-    return arrN.length > 1 ? superDigit(n, 1) : arrN[0]
+    
+    sum = sum * k
+    n = sum.toString()
+    return n.length > 1 ?superDigit(n,1):n[0]
 }
 
 
