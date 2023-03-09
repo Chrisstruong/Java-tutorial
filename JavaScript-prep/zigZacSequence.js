@@ -62,3 +62,4 @@ const arr2 = arr.splice(0,1)
 console.log(arr)
 
 // Whenever splice is called, the element of the array will be gone forever.
+console.log(2%6)
