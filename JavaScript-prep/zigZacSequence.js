@@ -26,20 +26,39 @@
 
 // }
 
-function processData(input) {
-    const arr = input.slice(4, input.length).split(" ")
-    const middle = (arr.length-1)/2
-    const sorted = arr.sort((a,b)=>a-b)
-    const max = sorted[sorted.length-1]
+// function processData(input) {
+//     const arr = input.slice(4, input.length).split(" ")
+//     const middle = (arr.length-1)/2
+//     const sorted = arr.sort((a,b)=>a-b)
+//     const max = sorted[sorted.length-1]
     
-    const result = [...sorted.slice(0, middle), max, ...sorted.slice( middle, sorted.length-1).reverse()]
-    process.stdout.write(result.join(" "))
+//     const result = [...sorted.slice(0, middle), max, ...sorted.slice( middle, sorted.length-1).reverse()]
+//     process.stdout.write(result.join(" "))
+// }
+
+// console.log(processData("1 2 3 4 5 6 7"))
+
+// console.log(5%1)
+
+// const arr = ['a', 'b', 'e', 'd']
+// arr.sort((a,b)=>b-a)
+// console.log(arr)
+
+function processData(input) {
+    //Enter your code here
+    input.sort((a,b)=> a-b)
+    let median = (input.length+1)/2 -1
+    const input2 = input.slice(0,median)
+    const input3 = input.slice(median, input.length)
+    input3.sort((a,b)=>b-a)
+    const result = [...input2, ...input3]
+    return result
 }
 
-console.log(processData("1 2 3 4 5 6 7"))
+console.log(processData([2,3,5,1,10,123,543]))
 
-console.log(5%1)
-
-const arr = ['a', 'b', 'e', 'd']
-arr.sort((a,b)=>b-a)
+const arr = [1,2,3,4,5]
+const arr2 = arr.splice(0,1)
 console.log(arr)
+
+// Whenever splice is called, the element of the array will be gone forever.
