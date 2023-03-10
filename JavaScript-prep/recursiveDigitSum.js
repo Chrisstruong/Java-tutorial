@@ -79,3 +79,9 @@ function superDigit(n, k) {
 
 
 console.log(superDigit("148", 3))
+
+
+const array = [1,2,3,4]
+
+// 4: index is 3. 
+// Possible index: 3-1=2, 3-2= 1
