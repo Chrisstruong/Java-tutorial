@@ -72,7 +72,7 @@ function mergeLists(head1, head2) {
         temp = temp.next
     }
 
-    // Space 0(1)
+    // Space 0(n)
     // time 0(m+n)
 
 }
@@ -161,19 +161,45 @@ function mergeLists(head1, head2) {
     //     // time 0(m+n)
     // }
 
+    function mergeLists(head1, head2) {
 
     class Node {
-        constructor(key) {
-            this.key = key
+        constructor(data) {
+            this.data = data
             this.next = null
         }
     }
 
-    function newNode(key) {
-        let temp = new Node (key)
+    function newNode(data) {
+        let temp = new Node (data)
         return temp
     }
 
-    let a = newNode(5)
-    a.next = newNode(10)
-    console.log(a)
+    let v = []
+
+    while(head1 !== null){
+        v.push(head1.data)
+        head1 = head1.next
+    }
+
+    while(head2 !== null) {
+        v.push(head2.data)
+        head2 = head2.next
+    }
+
+    v.sort((a,b)=>a-b)
+
+    let result = newNode(-1)
+    let temp = result
+
+    for (let i=0; i < v.length; i++) {
+        result.next = newNode(v[i])
+        result = result.next
+    }
+    console.log(result)
+
+}
+
+mergeLists()
+
+console.log(2%3)

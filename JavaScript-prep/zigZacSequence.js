@@ -44,22 +44,57 @@
 // arr.sort((a,b)=>b-a)
 // console.log(arr)
 
-function processData(input) {
-    //Enter your code here
-    input.sort((a,b)=> a-b)
-    let median = (input.length+1)/2 -1
-    const input2 = input.slice(0,median)
-    const input3 = input.slice(median, input.length)
-    input3.sort((a,b)=>b-a)
-    const result = [...input2, ...input3]
-    return result
+// function processData(input) {
+//     //Enter your code here
+//     input.sort((a,b)=> a-b)
+//     let median = (input.length+1)/2 -1
+//     const input2 = input.slice(0,median)
+//     const input3 = input.slice(median, input.length)
+//     input3.sort((a,b)=>b-a)
+//     const result = [...input2, ...input3]
+//     return result
+// }
+
+// console.log(processData([2,3,5,1,10,123,543]))
+
+// const arr = [1,2,3,4,5]
+// const arr2 = arr.splice(0,1)
+// console.log(arr)
+
+// // Whenever splice is called, the element of the array will be gone forever.
+
+
+console.log(0%3)
+
+function deviceNamesSystem(devicenames) {
+    // Write your code here
+    // Description: given an array with strings. If there are any same names, add 1 to n at the end of the repeated strings. Start at 1 to n to make that item unique
+    // the most important inputs:
+    // + devicenames: array of stirngs
+    // output: an array of unique strings
+    
+    // Thinking
+    // + Let the n = the length of the array because the number at the end can not over the length. Declare an array that store the first appeared strings. ['switch', 'tv]. Then count how many times the string repeated and then add num at the end
+    // Steps:
+    // 1) Declare n
+    // 2) Loop through an array to find unique strings
+    
+    let firstAppearedArray = 0
+
+    console.log(firstAppearedArray)
+    // for (let i = 0; i < firstAppearedArray.length; i++) {
+    //     let n = 0
+    //     for (let j = 0; j < devicenames.length; j++) {
+    //         if (devicenames[j] === firstAppearedArray[i]) {
+    //             devicenames[j] += `${n}`
+    //             n++
+    //         }
+            
+    //     }
+    // }
+    console.log(devicenames.slice(0,devicenames.e))
+    
+
 }
 
-console.log(processData([2,3,5,1,10,123,543]))
-
-const arr = [1,2,3,4,5]
-const arr2 = arr.splice(0,1)
-console.log(arr)
-
-// Whenever splice is called, the element of the array will be gone forever.
-console.log(2%6)
+deviceNamesSystem(['mixer','mixer'])
