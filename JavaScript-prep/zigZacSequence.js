@@ -87,7 +87,7 @@ function deviceNamesSystem(devicenames) {
     //     for (let j = 0; j < devicenames.length; j++) {
     //         if (devicenames[j] === firstAppearedArray[i]) {
     //             devicenames[j] += `${n}`
-    //             n++
+    //             n+++
     //         }
             
     //     }
