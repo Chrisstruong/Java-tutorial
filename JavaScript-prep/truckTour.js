@@ -1,6 +1,6 @@
 function truckTour(petrolpumps) {
     // Write your code here
-    // N : petrol pumps, 0->N-1
+    // N : petrol pumps, 0->N-1,
     // Will have amount of gas can give
     // Distance to next petrol station
     // Summary of the challenge: Determine the position for the truck to start so that it can finish a circle.
